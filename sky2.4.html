@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mad Max - English Content</title>
+   <link rel="icon" href="bb.png" type="image/png" />
+  <style>
+    /* Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url('pick1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #1e1e2f;
+}
+
+    /* Header */
+    header {
+      background: rgba(30, 30, 47, 0.9);
+      color: #fcefee;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav a {
+      color: #ffe3a3;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* Main */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.603);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      flex-grow: 1;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #3a2e4f;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #5f4c7b;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.418);
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 250px;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background: #ffe4b3;
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      color: #32294b;
+      margin-bottom: 0.7rem;
+    }
+
+    .card p {
+      color: #3c3c55;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background-color: rgba(30, 30, 47, 0.9);
+      color: #fcefee;
+      font-style: italic;
+      margin-top: auto;
+    }
+    @media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  
+
+  <header>
+    <h1>Mad Max</h1>
+    <nav>
+      <a href="sky1.html">Home</a>
+      <a href="#">English Content</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>English Content / Creation</h2>
+      <p>Creative expression, precise writing, and polished communication—delivered with clarity and care.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card" onclick="alert('Writing services coming soon!')">
+        <h3>Writing & Blogging</h3>
+        <p>Blogs, stories, web content, and compelling narratives tailored to your voice.</p>
+      </div>
+
+      <div class="card" onclick="alert('English tutoring coming soon!')">
+        <h3>English Tutoring</h3>
+        <p>Help with grammar, vocabulary, conversation skills, and fluency for all levels.</p>
+      </div>
+
+      <div class="card" onclick="alert('Proofreading services coming soon!')">
+        <h3>Proofreading</h3>
+        <p>Fix typos, improve tone, and refine structure without losing your message.</p>
+      </div>
+
+      <div class="card" onclick="alert('Voice work services coming soon!')">
+        <h3>Script / Voice Work</h3>
+        <p>Voiceovers, presentations, and creative scripts for content, ads, and more.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Words are power, shaped with precision.
+  </footer>
+
+</body>
+</html>

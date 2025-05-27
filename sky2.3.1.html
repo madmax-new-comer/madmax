@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Freelance Coding</title>
+   <link rel="icon" href="bb.png" type="image/png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+    body, html {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      color: #003f3f;
+      position: relative;
+    }
+
+    /* Background Video */
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.7) saturate(1.3);
+    }
+
+    header {
+      background-color: rgba(0, 80, 60, 0.8);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: #d6ffe3;
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #aaffcc;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ffff88;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 10rem auto;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+        flex: 1;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #b3ffe0;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ddfff7;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(0, 160, 120, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 260px;
+      transition: 0.3s ease;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 255, 190, 0.3);
+    }
+
+    .card:hover {
+      background: rgba(0, 255, 190, 0.6);
+      transform: scale(1.05);
+      color: #003f3f;
+    }
+
+    .card h3 {
+      margin-bottom: 0.8rem;
+      color: #ffff88;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #eafffa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-style: italic;
+      background-color: rgba(0, 80, 60, 0.8);
+      color: #c6fff5;
+      margin-top: 2rem ;
+      
+    }
+    @media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+
+  <!-- Background Video -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="c:\Users\3D\Desktop\max futer\3.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <header>
+    <h1>Mad Max</h1>
+    <nav>
+      <a href="sky1.html">Home</a>
+      <a href="#">Freelance Coding</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Code That Speaks for You</h2>
+      <p>Offering custom software solutions, websites, automation scripts, and more. Freelance work done with care, speed, and precision.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card" onclick="alert('Portfolio Section coming soon!')">
+        <h3>My Portfolio</h3>
+        <p>Browse past freelance projects including web apps, full-stack platforms, and toolkits.</p>
+      </div>
+      <div class="card" onclick="alert('Hire Me Section coming soon!')">
+        <h3>Hire Me</h3>
+        <p>Let’s collaborate — see how we can turn your idea into a powerful, working solution.</p>
+      </div>
+      <div class="card" onclick="alert('Rates & FAQ coming soon!')">
+        <h3>Rates & FAQ</h3>
+        <p>Transparent pricing, quick responses, and fair timelines — all explained here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Coded under the stars, powered by coffee and dreams.
+  </footer>
+</body>
+</html>

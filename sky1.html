@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mad Max - Random, but Ready</title>
+   <link rel="icon" href="bb.png" type="image/png" />
+  <style>
+    .transparent-box {
+  background: rgba(255, 115, 0, 0.233); /* Semi-transparent black */
+  backdrop-filter: blur(6px);     /* Blur the background */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #fff;
+  margin: 1rem 0;
+}
+.cta-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px #ff4500;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 69, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 69, 0, 0);
+  }
+}
+.services-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.services-grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between; /* spread evenly */
+  flex-wrap: nowrap;
+  padding: 1rem 0;
+  overflow: visible; /* no scroll */
+}
+
+.section-card {
+  flex: 1 1 0; /* flex-grow:1, flex-shrink:1, flex-basis:0 */
+  min-width: 0; /* allow shrinking below content size */
+  max-width: 22%; /* max width to fit 4 cards nicely with gap */
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to right, #2c005f, #003360);
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  animation: pulseGlow 2.5s infinite;
+  white-space: normal; /* allow wrapping inside */
+}
+
+.section-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.7);
+}
+
+.section-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.9);
+}
+
+.services-grid::-webkit-scrollbar {
+  display: none;
+}
+.services-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(138, 43, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+  }
+}
+
+
+.cta-button {
+  animation: pulse 2s infinite;
+}
+
+
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      margin: 0; padding: 0;
+      display: flex; flex-direction: column; min-height: 100vh;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #ff4500;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0; margin-bottom: 1.5rem;
+      color: #bbb;
+    }
+    .cta-button {
+      background-color: #ff4500;
+      color: #121212;
+      padding: 0.8rem 1.8rem;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #e03e00;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #ff4500;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-style: italic;
+      color: #777;
+    }
+    #bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+  z-index: 0;
+}
+
+main, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  @media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+ 
+
+  
+  
+    <video autoplay muted loop id="bgVideo">
+        <source src=1.mp4 type="video/mp4">
+      </video>
+      
+  <header>
+    <h1>I Build, I Design, I Fix—Randomly Brilliant.</h1>
+    <p>Turning chaotic ideas into clean code, working hardware, and expressive art.</p>
+    <a href="#work" class="cta-button">Let’s Work Together</a>
+  </header>
+  <main>
+    <section id="about">
+      <h2>Who’s Behind <em>Mad Max</em>?</h2>
+      <p>
+        Just a random guy who happens to speak fluent code, fix tech from the future, and draw what others feel but can’t explain.<br />
+        I build websites, help with PC setups, write about hardware, and sometimes sketch surreal things. No fluff—just real work that gets things done.
+      </p>
+    </section>
+    <section id="services">
+      <h2>What I Do</h2>
+      <ul>
+        <li><strong>Website Creation</strong> – Fast, functional, and tailored to the point.</li>
+        <li><strong>PC Hardware Guidance</strong> – Build planning, performance analysis, power tips.</li>
+        <li><strong>Remote Tech Support</strong> – Software help, troubleshooting, optimization.</li>
+        
+      </ul>
+    </section>
+    
+    </section>
+    <section class="services text-white py-16 px-6 bg-black/70 backdrop-blur">
+        <h2 class="text-4xl font-bold text-center mb-12 text-blue-400">What I Can Do For You</h2>
+        <p class="text-center max-w-xl mx-auto text-gray-300 mb-12">
+          I build, fix, and code , Here's what I can help you with.
+        </p>
+      
+        
+          <!-- Website Building -->
+          
+        
+      
+          <div class="transparent-box">
+          <!-- Software Fixes -->
+          <div class="bg-gradient-to-br from-blue-800 to-purple-600 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
+            <h3 class="text-2xl font-semibold mb-2">Software Diagnostics</h3>
+            <p>Fix, reset, optimize. I can make your PC feel new — even if it’s ancient.</p>
+          </div>
+      
+          
+          <div class="transparent-box">
+          <!-- PC Hardware Help -->
+          <div class="bg-gradient-to-br from-purple-900 to-blue-700 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
+            <h3 class="text-2xl font-semibold mb-2">PC Building / Advice</h3>
+            <p>I know every CPU/GPU from 2018–2025. I can help you choose or optimize your build like a pro.</p>
+          </div>
+      </div>
+
+      <div class="transparent-box">
+          <!-- Digital Art -->
+          <div class="bg-gradient-to-br from-purple-800 to-blue-600 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
+            <h3 class="text-2xl font-semibold mb-2">Web Design & Coding</h3>
+            <p>Clean, custom-coded websites from scratch. No WordPress. Just real HTML, CSS, JS, and logic.</p>
+          </div>
+      </div>
+      <div class="transparent-box">
+          <!-- English Help -->
+          <div class="bg-gradient-to-br from-blue-900 to-purple-700 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
+            <h3 class="text-2xl font-semibold mb-2">English Content / Correction</h3>
+            <p>Need a clean English paragraph, correction, or explanation? I got you. Casual or pro tone.</p>
+          </div>
+      </div>
+
+      <div class="transparent-box">
+          <!-- Random Tech Help -->
+          <div class="bg-gradient-to-br from-purple-900 to-blue-800 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
+            <h3 class="text-2xl font-semibold mb-2">Random Tech Problems</h3>
+            <p>Weird tech bug? Random problem? Don’t know what’s wrong? I’ll figure it out.</p>
+          </div>
+            </div>
+            <div class="services-grid">
+              <a href="sky2.2.html" class="section-card">PC Building / Advice</a>
+              <a href="sky2.3.1.html" class="section-card">Freelance Coding</a>
+              <a href="sky2.4.html" class="section-card">English Content / Creation</a>
+              <a href="sky2.5.html" class="section-card">Problem Fixing</a>
+            </div>
+            
+              
+      </div>
+  </main>
+  <footer>
+    Built from chaos. Coded with care.
+  </footer>
+</body>
+</html>

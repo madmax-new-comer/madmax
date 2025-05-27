@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mad Max - PC Building & Advice</title>
+   <link rel="icon" href="bb.png" type="image/png" />
+  <style>
+    /* Video & overlay setup */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 20, 0.7);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(30, 0, 50, 0.8);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #a499ff;
+    }
+    header nav a {
+      color: #bbd2ff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      color: #bbaaff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #d6d9ff;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      justify-content: center;
+    }
+    .card {
+      background: rgba(75, 0, 130, 0.6);
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 260px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 0 10px rgba(130, 0, 255, 0.3);
+      color: #ddd;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      background: rgba(130, 0, 255, 0.8);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(180, 0, 255, 0.7);
+      color: #fff;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #bbaaff;
+    }
+    .card p {
+      flex-grow: 1;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #d6d9ff;
+    }
+
+    footer {
+      background-color: rgba(30, 0, 50, 0.8);
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-style: italic;
+      color: #777;
+      backdrop-filter: blur(10px);
+    }
+    @media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark overlay for contrast -->
+  <div class="overlay"></div>
+
+  <!-- Content -->
+  <header>
+    <h1>Mad Max</h1>
+    <nav>
+      <a href="sky1.html">Home</a>
+      <a href="#">PC Building & Advice</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Build Your Dream PC — Without the Chaos</h2>
+      <p>Clear, practical advice for picking parts, troubleshooting issues, and optimizing your build for performance and value.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card" onclick="alert('CPU Guide coming soon!')">
+        <h3>CPU Selection</h3>
+        <p>Learn how to choose the right processor based on your needs, budget, and gaming or work preferences.</p>
+      </div>
+
+      <div class="card" onclick="alert('GPU Advice coming soon!')">
+        <h3>GPU Guidance</h3>
+        <p>Find the best graphics card for your build, considering performance, price, and compatibility.</p>
+      </div>
+
+      <div class="card" onclick="alert('Power Supply Tips coming soon!')">
+        <h3>Power Supply Units</h3>
+        <p>Understand wattage requirements, efficiency ratings, and why a good PSU matters.</p>
+      </div>
+
+      <div class="card" onclick="alert('RAM & Storage Tips coming soon!')">
+        <h3>RAM & Storage</h3>
+        <p>How much memory and storage you really need, plus advice on SSDs vs HDDs.</p>
+      </div>
+
+      <div class="card" onclick="alert('Cooling Solutions coming soon!')">
+        <h3>Cooling & Airflow</h3>
+        <p>Keep your system cool and quiet with the right fans, liquid cooling, and case airflow setup.</p>
+      </div>
+
+      <div class="card" onclick="alert('Troubleshooting coming soon!')">
+        <h3>Troubleshooting & Support</h3>
+        <p>Common problems and fixes, plus tips on diagnosing hardware issues.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built from chaos. Coded with care.
+  </footer>
+</body>
+</html>
